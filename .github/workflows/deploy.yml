@@ -1,31 +1,27 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read # This is required for actions/checkout
+
 jobs:
-  deploy:
-    name: Upload to Amazon S3
+  build-and-deploy:
     runs-on: ubuntu-latest
-    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
-    permissions:
-      id-token: write
-      contents: read
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
 
-      - name: Configure AWS credentials from Test account
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: arn:aws:iam::111111111111:role/my-github-actions-role-test
-          aws-region: us-east-1
-
-      - name: Copy files to the test website with the AWS CLI
+      - name: Install and Build 🔧
         run: |
-          aws s3 sync . s3://my-s3-test-website-bucket
+          npm ci
+          npm run build
 
-      - name: Configure AWS credentials from Production account
-        uses: aws-actions/configure-aws-credentials@v1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          role-to-assume: arn:aws:iam::222222222222:role/my-github-actions-role-prod
-          aws-region: us-west-2
-
-      - name: Copy files to the production website with the AWS CLI
-        run: |
-          aws s3 sync . s3://my-s3-prod-website-bucket
+          branch: gh-pages
+          folder: dist
