@@ -1,0 +1,145 @@
+<section class="contacts" id="contact">
+    <div class="container">
+        <h2 class="hidden">card</h2>
+        <ul class="card">
+            <li class="contacts__card">
+                <p class="card__category">CAFE</p>
+                <h3 class="card__title">Chicago</h3>
+
+                <p class="card__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+
+                <div class="timetable__wrap">
+                    <ul class="timetable">
+                        <li class="timetable__day">Monday - Friday</li>
+                        <li class="timetable__time">06:00 AM - 10:00 PM</li>
+                    </ul>
+                    <ul>
+                        <li class="timetable__day">Saturday - Sunday</li>
+                        <li class="timetable__time">08:00 AM - 16:00 PM</li>
+                    </ul>
+                </div>
+                <div class="contacts__wrap">
+                    <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </div>
+            </li>
+            <li class="contacts__card">
+                <p class="card__category second">FOODTRUCK</p>
+                <h3 class="card__title">Los Angeles</h3>
+                <p class="card__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                <div class="timetable__wrap">
+                    <ul class="timetable">
+                        <li class="timetable__day">Monday - Friday</li>
+                        <li class="timetable__time">06:00 AM - 10:00 PM</li>
+                    </ul>
+                    <ul>
+                        <li class="timetable__day">Saturday - Sunday</li>
+                        <li class="timetable__time">08:00 AM - 16:00 PM</li>
+                    </ul>
+                </div>
+                <div class="contacts__wrap">
+                    <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </div>
+            </li>
+            <li class="contacts__card">
+                <p class="card__category">Cafe</p>
+                <h3 class="card__title">New York</h3>
+                <p class="card__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                <div class="timetable__wrap">
+                    <ul class="timetable">
+                        <li class="timetable__day">Monday - Friday</li>
+                        <li class="timetable__time">06:00 AM - 10:00 PM</li>
+                    </ul>
+                    <ul>
+                        <li class="timetable__day">Saturday - Sunday</li>
+                        <li class="timetable__time">08:00 AM - 16:00 PM</li>
+                    </ul>
+                </div>
+                <div class="contacts__wrap">
+                    <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </div>
+            </li>
+        </ul>
+        <div class="button__wrap">
+            <a class="contacts__button current" href="https://goo.gl/maps/qRE5nDJFRqJ3UxXc9" target="_blank"
+                rel="noopener noreferrer nofollow">Our Locations</a>
+            <!-- <button class="contacts__button current" type="button">Our Locations <span class="more"> > </span> -->
+            <!-- <svg class="button__icon">
+                <use href="./img/icons.svg#Vector-1-1"></use>
+            </svg> -->
+            </button>
+            <button class="contacts__button" type="button" data-contacts-menu-open>Franchise <span class="more"> >
+                </span>
+                <!-- <svg class="button__icon">
+                    <use href="./img/icons.svg#Vector-1-1"></use>
+                </svg> -->
+            </button>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- -----МОДАЛЬНОЕ ОКНО-------- -->
+<div class="contacts__backdrop is-hidden" data-contacts-menu>
+    <div class="contacts__modal">
+        <button class=" modal__close" type="button" data-contacts-menu-close>
+            <svg class="modal__img">
+                <use href="./img/icons.svg#cross"></use>
+            </svg>
+        </button>
+
+        <!-- форма заполнения -->
+        <form class="modal__form js-callback-form">
+            <h2 class="modal__title">Leave your details, <br> we will call you back</h2>
+
+            <label for="contacts-name"></label>
+            <span class="form__label">Name</span>
+            <div class="field">
+                <svg class="field__icon">
+                    <use href="./img/icons.svg#person"></use>
+                </svg>
+                <input class="field__input" type="text" name="name" id="contacts-name" />
+            </div>
+
+
+            <label for="contacts-tel"></label>
+            <span class="form__label">Telephone</span>
+            <div class="field">
+                <svg class="field__icon">
+                    <use href="./img/icons.svg#phone"></use>
+                </svg>
+                <input class="field__input" type="tel" name="tel" id="contacts-tel" />
+            </div>
+
+
+            <label for="contacts-emeil"></label>
+            <span class="form__label">Mail</span>
+            <div class="field">
+                <svg class="field__icon">
+                    <use href="./img/icons.svg#email"></use>
+                </svg>
+                <input class="field__input" type="email" name="emeil" id="contacts-emeil" />
+            </div>
+
+
+            <label for="comment">
+                <span class="form__label">Comments</span>
+                <textarea class="form__comment" name="comment" id="comment" rows="10"
+                    placeholder="Type your text"></textarea>
+            </label>
+
+            <label class="form__deal" for="deal">
+                <input class="checkbox" type="checkbox" name="deal" value="deal" id="deal">
+                <span class="checkbox__icon"></span>
+                I agree to the newsletter and accept the terms of the
+                <a class="form__link" href="#"> Contract </a>
+            </label>
+
+            <button class="modal__button" type="submit">Send</button>
+
+        </form>
+    </div>
+</div>

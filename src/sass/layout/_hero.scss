@@ -1,0 +1,395 @@
+.hero {
+    position: relative;
+    background-color: #ffb8ca;
+    height: 444px;
+    padding-top: 136px;
+    padding-bottom: 158px;
+    overflow: hidden;
+
+    @include tablet {
+        padding-top: 10px;
+        padding-bottom: 56px;
+        overflow: visible;
+
+        height: 334px;
+    }
+
+    @include comp {
+        padding-top: 60px;
+        padding-bottom: 84px;
+
+        height: 603px;
+    }
+
+}
+
+.hero__title {
+    width: 218px;
+
+    font-family: 'Titan One', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include tablet {
+        margin-top: 10px;
+        
+        width: 162px;
+        font-size: 22px;
+        line-height: 1.13;
+    }
+
+    @include comp {
+        margin-top: 0;
+
+        width: 277px;
+        font-size: 38px;
+    }
+}
+
+.hero__title--bolt {    
+    font-size: 44px;
+    color: $accent-color;
+
+    @include tablet {
+        font-size: 34px;
+    }
+
+    @include comp {
+        font-size: 58px;
+    }
+}
+
+.hero__list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.hero__item {
+    margin-top: 20px;
+    @include comp {
+        margin-top: 24px;
+    }
+}
+
+.hero__button {
+    margin: 0;
+    margin-top: 20px;
+    margin-right: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+
+    @include comp {
+        margin-top: 24px;
+        margin-right: 12px;
+    }
+}
+
+.hero__button--primary {
+    padding: 8px 13px;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    color: #fff;
+    background-color: $accent-color;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: #E17992;
+    }
+
+    @include comp {
+        font-size: 14px;
+        line-height: 1.28;
+
+        padding: 12px 26px;
+    }
+}
+
+.hero__button--secondary {
+    padding: 8px 13px;
+    margin-right: 0;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    color: $accent-color;
+    background-color: #fff;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: #ECEBEB;
+    }
+
+    @include comp {
+        font-size: 14px;
+        line-height: 1.28;
+
+        padding: 12px 26px;
+    }
+}
+
+.hero__circle {
+    display: block;
+    position: absolute;
+    top: -111px;
+    left: 16px;
+    // z-index: -10;
+
+    width: 346px;
+    height: 344px;
+    border-radius: 50%;
+
+    background-color: $background-circle;
+
+    @include tablet {
+        top: -59px;
+        left: 216px;
+        width: 335px;
+        height: 333px;
+    }
+
+    @include comp {
+        top: -93px;
+        left: 468px;
+
+        width: 534px;
+        height: 534px;
+    }
+}
+
+.hero-fixed {
+    position: relative;
+}
+
+.hero__picture--one {
+    position: absolute;
+    top: -102px;
+    left: 97px;
+    // z-index: -9;
+
+    width: 171px;
+    height: 410px;
+
+    @include tablet {
+        top: -20;
+        right: 0;
+        left: 290px;
+
+
+        width: 143px;
+        height: 336px;
+    }
+
+    @include comp {
+        width: 236px;
+        height: 557px;
+
+        top: -23px;
+        left: 620px;
+    }
+}
+
+.hero__picture--two {
+    display: none;
+    @include tablet {
+        display: block;
+        position: absolute;
+        top: 154px;
+        left: 0px;
+        // z-index: -9;
+            
+        width: 152px;
+        height: 154px;
+    }
+
+    @include comp {
+        width: 213px;
+        height: 216px;
+
+        top: 271px;
+    }
+
+}
+
+.hero__picture--three {
+    display: none;
+
+    @include tablet {
+        display: block;
+        position: absolute;
+        top: 174px;
+        right: 0px;
+        // z-index: -9;
+
+        width: 190px;
+        height: 150px;
+    }
+
+    @include comp {
+        width: 304px;
+        height: 241px;
+
+        top: 303px;
+    }
+}
+
+.hero-element {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.hero-flex {
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.hero-element__text {
+    position: relative;
+    color: #fff;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+
+    &::after {
+        z-index: -2;
+        content:'';
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        // z-index: -1;
+        transform: translateX(50%);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        @include comp {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @include comp {
+        font-size: 14px;
+    }
+}
+
+.hero-element__text--item {
+    display: block;
+    font-family: 'Titan One', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accent-color;
+
+    @include comp {
+        font-size: 46px;
+    }
+}
+
+.hero-element__link {
+    margin-right: 10px;
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include comp {
+        margin-right: 15px;
+    }
+}
+
+.hero-text {
+    display: none;
+    position: relative;
+    z-index: 12;
+
+    @include tablet {
+        display: block;
+        margin-top: 61px;
+        margin-left: 152px;
+            
+        width: 114px;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 1.5;
+        color: #fff;
+    }
+
+    @include comp {
+        margin-top: 108px;
+        margin-left: 212px;
+
+        width: 200px;
+
+        font-size: 14px;
+    }
+}
+
+.hero-button {
+    display: none;
+    @include tablet {
+        display: flex;
+
+        margin: 0;
+        margin-left: 152px;
+        margin-top: 7px;
+        padding: 5px;
+        border: none;
+        border-radius: 50%;
+        background-color: #fff;
+
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            background-color: #ECEBEB;
+        }
+    }
+
+    @include comp {
+        padding: 10px;
+        margin-left: 212px;
+        margin-top: 20px;
+
+        & svg {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    & svg {
+        fill: $accent-color;
+    }
+}
+

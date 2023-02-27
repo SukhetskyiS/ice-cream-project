@@ -1,0 +1,225 @@
+.advantages {
+  max-width: 480px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  background-color: $background-about;
+
+  @include mob {
+    max-width: 767px;
+  }
+
+  @include tablet {
+    max-width: 1199px;
+    padding-top: 60px;
+  }
+
+  @include comp {
+    max-width: 100%;
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+
+    @include tablet {
+      width: 768px;
+    }
+
+    @include comp {
+      width: 1200px;
+    }
+  }
+
+  &__title {
+    @extend %vissually-hidden;
+  }
+
+  &__list {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    margin: 0;
+
+    @include tablet {
+      display: flex;
+      gap: 115px;
+    }
+
+    @include comp {
+      gap: 148px;
+    }
+  }
+
+  &__numbers {
+    @include font(36px, 400, 41px, 0.04em);
+
+    position: static;
+
+    margin: 0;
+
+    &--gear::before {
+      display: block;
+      content: '';
+      position: static;
+      background-image: url(../img/vedro-tel.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      width: 33px;
+      height: 50px;
+
+      @include retina {
+        background-image: url(../img/vedro-tel@2x.png);
+      }
+
+      @include tablet {
+        background-image: url(../img/vedro-tablet.png);
+
+        @include retina {
+          background-image: url(../img/vedro-tablet@2x.png);
+        }
+      }
+
+      @include comp {
+        background-image: url(../img/vedro-comp.png);
+
+        @include retina {
+          background-image: url(../img/vedro-comp@2x.png);
+        }
+      }
+    }
+
+    &--apple::before {
+      display: block;
+      content: '';
+      position: static;
+      background-image: url(../img/vedroapple-tel.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      width: 50px;
+      height: 50px;
+
+      @include retina {
+        background-image: url(../img/vedroapple-tel@2x.png);
+      }
+
+      @include tablet {
+        background-image: url(../img/vedroapple-tablet.png);
+
+        @include retina {
+          background-image: url(../img/vedroapple-tablet@2x.png);
+        }
+      }
+
+      @include comp {
+        background-image: url(../img/vedroapple-comp.png);
+
+        @include retina {
+          background-image: url(../img/vedroapple-comp@2x.png);
+        }
+      }
+    }
+
+    &--heart::before {
+      display: block;
+      content: '';
+      position: static;
+      background-image: url(../img/heart-tel.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      width: 44px;
+      height: 50px;
+
+      @include retina {
+        background-image: url(../img/heart-tel@2x.png);
+      }
+
+      @include tablet {
+        background-image: url(../img/heart-tablet.png);
+
+        @include retina {
+          background-image: url(../img/heart-tablet@2x.png);
+        }
+      }
+
+      @include comp {
+        background-image: url(../img/heart-comp.png);
+
+        @include retina {
+          background-image: url(../img/heart-comp@2x.png);
+        }
+      }
+    }
+  }
+
+  &__text {
+    @include font(12px, 700, 20px, 0em);
+
+    width: 230px;
+    height: 36px;
+
+    color: $second-text-color;
+
+    margin: 0;
+    margin-top: 4px;
+
+    @include tablet {
+      @include font(14px, 700, 24px, 0em);
+
+      width: 166px;
+      height: 67px;
+
+      margin-top: 13px;
+    }
+
+    @include comp {
+      @include font(16px, 700, 28px, 0.02em);
+
+      width: 288px;
+      height: 52px;
+
+      margin-top: 16px;
+    }
+  }
+}
+
+.advantages__title--number {
+  @include font(36px, 400, 41px, 0.04em);
+
+  position: static;
+
+  margin-top: 16px;
+
+  height: 56px;
+
+  font-family: 'Titan One';
+  text-transform: uppercase;
+  color: $accent-color;
+
+  @include tablet {
+    @include font(48px, 400, 55px, 0.04em);
+
+    text-transform: lowercase;
+
+    margin-top: 36px;
+  }
+
+  @include comp {
+    @include font(58px, 400, 66px, 0.04em);
+
+    height: 65px;
+
+    margin-top: 40px;
+  }
+}
